@@ -12,6 +12,8 @@
             box-sizing: border-box !important;
         }
 
+       
+
         .tabuleiro{
             display: block;
             margin: auto;
@@ -27,7 +29,7 @@
             border: 1px solid #000;
             background: #fff;
             float: left;
-            color: #fff;
+            color: transparent;
             font-size: 20px;
             text-align: center;
             display: flex;
@@ -52,11 +54,16 @@
             color: blue;
         }
 
+         .marcador{
+            background: url('https://cdn4.iconfinder.com/data/icons/maps-and-navigation-solid-icons-vol-3/72/115-128.png') center center no-repeat;
+            background-size: contain;
+        }
+
     </style>
 </head>
 <body>
     
-    <div class="tabuleiro">
+    <div oncontextmenu="return false;" class="tabuleiro">
         <div class="celula"></div>
         <div class="celula"></div>
         <div class="celula"></div>

@@ -1,7 +1,7 @@
 
 (function (){
     
-    var numeroDeBombas = 20;
+    var numeroDeBombas = 10;
     var numeroDeCampos = 100;
     var CamposRestantes = numeroDeCampos - numeroDeBombas;
 
@@ -15,7 +15,16 @@
         // ? cria o tabuleiro  (roda o número total de celulas)
         for (let index = 0; index < celulas.length; index++) {
             
-            celulas[index].addEventListener("click", function (){
+            celulas[index].addEventListener("mousedown", function (e){
+                console.log(e.button);
+                if(e.button === 2){
+                    if( this.className.indexOf("marcador") === -1)
+                        this.classList.add("marcador");
+                    else    
+                        this.classList.remove("marcador");
+
+                    return;
+                }
 
                 if( jaFoiClicado(this))
                     return;
